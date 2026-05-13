@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rego Attribution Report — 2–12 May 2026</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f5f5;color:#111;padding:2rem;}
+.page{max-width:1100px;margin:0 auto;background:#fff;border-radius:12px;padding:2rem;box-shadow:0 2px 12px rgba(0,0,0,0.08);}
+.page-header{padding-bottom:0.85rem;border-bottom:1px solid #e5e7eb;margin-bottom:1.5rem;}
+.page-header h2{font-size:20px;font-weight:600;color:#111;}
+.page-header p{font-size:13px;color:#666;margin-top:4px;}
+.region-header{display:flex;align-items:center;gap:10px;margin:2rem 0 1rem;}
+.rbadge{padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;}
+.au{background:#E6F1FB;color:#0C447C;}
+.nz{background:#EAF3DE;color:#27500A;}
+.rlabel{font-size:16px;font-weight:500;color:#111;}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:1.5rem;}
+.metric{background:#f9f9f9;border-radius:10px;padding:1rem 1.1rem;border:1px solid #ececec;}
+.ml{font-size:11px;color:#888;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em;}
+.mv{font-size:22px;font-weight:600;color:#111;}
+.ms{font-size:11.5px;color:#aaa;margin-top:3px;}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem;}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.1rem 1.25rem;}
+.ct{font-size:13px;font-weight:600;color:#111;margin-bottom:0.85rem;}
+.br{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.bl{font-size:11.5px;color:#666;min-width:130px;text-align:right;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.bt{flex:1;height:14px;background:#f0f0f0;border-radius:4px;overflow:hidden;}
+.bf{height:100%;border-radius:4px;}
+.bv{font-size:11.5px;color:#888;min-width:28px;text-align:right;}
+.tcard{background:#fff;border:1px solid #e5e7eb;border-radius:10px;padding:1.1rem 1.25rem;margin-bottom:1.5rem;overflow-x:auto;}
+table{width:100%;border-collapse:collapse;font-size:12.5px;table-layout:fixed;}
+th{color:#888;font-weight:600;text-align:left;padding:6px 10px 8px;border-bottom:1px solid #e5e7eb;font-size:11px;text-transform:uppercase;letter-spacing:0.04em;}
+td{padding:8px 10px;border-bottom:1px solid #f0f0f0;color:#111;vertical-align:top;line-height:1.5;}
+tr:last-child td{border-bottom:none;}
+tr:hover td{background:#fafafa;}
+.pill{display:inline-flex;align-items:center;padding:2px 8px;border-radius:20px;font-size:11px;font-weight:500;margin:2px 2px 0 0;white-space:nowrap;}
+.pe{background:#E6F1FB;color:#0C447C;}
+.pa{background:#EAF3DE;color:#27500A;}
+.pr{background:#EEEDFE;color:#3C3489;}
+.po{background:#f3f3f3;color:#555;}
+.divider{border:none;border-top:1px solid #e5e7eb;margin:2.5rem 0;}
+.leg{display:flex;flex-wrap:wrap;gap:10px;font-size:11.5px;color:#666;margin-bottom:10px;}
+.leg span{display:flex;align-items:center;gap:5px;}
+.ld{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="page-header">
+  <h2>Registration Campaign Attribution — 2–12 May 2026</h2>
+  <p>Legalwise Seminars &bull; 141 total registrations &bull; $46,099 total revenue &bull; AU + NZ</p>
+</div>
+
+<!-- AUSTRALIA -->
+<div class="region-header">
+  <span class="rbadge au">Australia</span>
+  <span class="rlabel">103 registrations &bull; $34,340 revenue</span>
+</div>
+
+<div class="metrics">
+  <div class="metric"><div class="ml">Registrations</div><div class="mv">103</div><div class="ms">73% of total</div></div>
+  <div class="metric"><div class="ml">Revenue</div><div class="mv">$34,340</div><div class="ms">74% of total</div></div>
+  <div class="metric"><div class="ml">Top Source</div><div class="mv">MX Email</div><div class="ms">55 regos · $16,565</div></div>
+  <div class="metric"><div class="ml">Top Seminar</div><div class="mv">Native Title</div><div class="ms">25 regos · $16,333</div></div>
+</div>
+
+<div class="two-col">
+  <div class="card">
+    <div class="ct">AU — Source (registrations)</div>
+    <div class="leg">
+      <span><span class="ld" style="background:#378ADD"></span>MX Email</span>
+      <span><span class="ld" style="background:#639922"></span>Ads/Social</span>
+      <span><span class="ld" style="background:#888780"></span>N/A</span>
+      <span><span class="ld" style="background:#EF9F27"></span>Google Search</span>
+    </div>
+    <div id="a1"></div>
+  </div>
+  <div class="card">
+    <div class="ct">AU — Campaign (registrations)</div>
+    <div id="a2"></div>
+  </div>
+</div>
+
+<div class="tcard">
+  <div class="ct">AU — Top Seminars &amp; Source Breakdown</div>
+  <table>
+    <colgroup><col style="width:3%"><col style="width:30%"><col style="width:7%"><col style="width:10%"><col style="width:50%"></colgroup>
+    <thead><tr><th>#</th><th>Seminar</th><th>Regos</th><th>Revenue</th><th>Source Breakdown</th></tr></thead>
+    <tbody>
+      <tr><td style="color:#aaa">1</td><td>16th Annual Native Title Conference</td><td><b>25</b></td><td>$16,333</td><td><span class="pill pe">MX Email 10 · $5,839</span><span class="pill pa">Ads/Social 10 · $6,996</span><span class="pill pr">Ret. Sub. 2 · $1,113</span><span class="pill po">Other 3 · $2,385</span></td></tr>
+      <tr><td style="color:#aaa">2</td><td>Wills &amp; Estates Essentials Workshop</td><td><b>7</b></td><td>$2,226</td><td><span class="pill pa">Ads/Social 5 · $1,596</span><span class="pill pe">MX Email 2 · $630</span></td></tr>
+      <tr><td style="color:#aaa">3</td><td>Rural Property Transactions Intensive</td><td><b>5</b></td><td>$800</td><td><span class="pill pe">MX Email 3 · $480</span><span class="pill pa">Ads/Social 1 · $160</span><span class="pill po">N/A 1 · $160</span></td></tr>
+      <tr><td style="color:#aaa">4</td><td>Decision Making &amp; Reason Writing Workshop</td><td><b>4</b></td><td>$1,680</td><td><span class="pill pe">MX Email 4 · $1,680</span></td></tr>
+      <tr><td style="color:#aaa">5</td><td>Managing Psychosocial Risk in the Workplace</td><td><b>4</b></td><td>$640</td><td><span class="pill pe">MX Email 3 · $480</span><span class="pill pr">Ret. PD 1 · $160</span></td></tr>
+      <tr><td style="color:#aaa">6</td><td>Conveyancing Fundamentals</td><td><b>3</b></td><td>$1,515</td><td><span class="pill pe">MX Email 3 · $1,515</span></td></tr>
+      <tr><td style="color:#aaa">7</td><td>Growing Legal Practice Revenues in a World of AI</td><td><b>3</b></td><td>$690</td><td><span class="pill pe">MX Email 2 · $460</span><span class="pill pr">Ret. Sub. 1 · $230</span></td></tr>
+      <tr><td style="color:#aaa">8</td><td>When Is a Brand "Too Close"? Trade Mark Cases</td><td><b>3</b></td><td>$442</td><td><span class="pill pe">MX Email 2 · $282</span><span class="pill po">N/A 1 · $160</span></td></tr>
+      <tr><td style="color:#aaa">9</td><td>Workers Compensation: Psych &amp; Psychiatric Claims</td><td><b>2</b></td><td>$840</td><td><span class="pill pe">MX Email 2 · $840</span></td></tr>
+      <tr><td style="color:#aaa">10</td><td>Ethics for Trade Mark &amp; Patent Attorneys</td><td><b>2</b></td><td>$320</td><td><span class="pill pe">MX Email 2 · $320</span></td></tr>
+      <tr><td style="color:#aaa">11</td><td>Using AI Effectively in Legal Contexts</td><td><b>2</b></td><td>$286</td><td><span class="pill pe">MX Email 2 · $286</span></td></tr>
+      <tr><td style="color:#aaa">12</td><td>Managing Contractor &amp; Visitor Safety on School Grounds</td><td><b>2</b></td><td>$320</td><td><span class="pill pe">MX Email 2 · $320</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<hr class="divider">
+
+<!-- NEW ZEALAND -->
+<div class="region-header">
+  <span class="rbadge nz">New Zealand</span>
+  <span class="rlabel">38 registrations &bull; $11,759 revenue</span>
+</div>
+
+<div class="metrics">
+  <div class="metric"><div class="ml">Registrations</div><div class="mv">38</div><div class="ms">27% of total</div></div>
+  <div class="metric"><div class="ml">Revenue</div><div class="mv">$11,759</div><div class="ms">26% of total</div></div>
+  <div class="metric"><div class="ml">Top Source</div><div class="mv">MX Email</div><div class="ms">18 regos · $5,901</div></div>
+  <div class="metric"><div class="ml">Top Seminar</div><div class="mv">Rel. Property</div><div class="ms">6 regos · $2,520</div></div>
+</div>
+
+<div class="two-col">
+  <div class="card">
+    <div class="ct">NZ — Source (registrations)</div>
+    <div class="leg">
+      <span><span class="ld" style="background:#378ADD"></span>MX Email</span>
+      <span><span class="ld" style="background:#639922"></span>Ads/Social</span>
+      <span><span class="ld" style="background:#888780"></span>N/A</span>
+      <span><span class="ld" style="background:#7F77DD"></span>Returning</span>
+    </div>
+    <div id="n1"></div>
+  </div>
+  <div class="card">
+    <div class="ct">NZ — Campaign (registrations)</div>
+    <div id="n2"></div>
+  </div>
+</div>
+
+<div class="tcard">
+  <div class="ct">NZ — Top Seminars &amp; Source Breakdown</div>
+  <table>
+    <colgroup><col style="width:3%"><col style="width:33%"><col style="width:7%"><col style="width:10%"><col style="width:47%"></colgroup>
+    <thead><tr><th>#</th><th>Seminar</th><th>Regos</th><th>Revenue</th><th>Source Breakdown</th></tr></thead>
+    <tbody>
+      <tr><td style="color:#aaa">1</td><td>Relationship Property: Jurisdiction, Intermingling &amp; Structures</td><td><b>6</b></td><td>$2,520</td><td><span class="pill pe">MX Email 3 · $1,260</span><span class="pill pr">Ret. PD 2 · $840</span><span class="pill po">N/A 1 · $420</span></td></tr>
+      <tr><td style="color:#aaa">2</td><td>Law &amp; Practice for School Guidance Counsellors</td><td><b>3</b></td><td>$1,863</td><td><span class="pill pe">MX Email 2 · $1,380</span><span class="pill po">Live Chat 1 · $483</span></td></tr>
+      <tr><td style="color:#aaa">3</td><td>Wills Drafting: Complex Relationships &amp; Assets</td><td><b>3</b></td><td>$1,260</td><td><span class="pill pe">MX Email 2 · $840</span><span class="pill po">N/A 1 · $420</span></td></tr>
+      <tr><td style="color:#aaa">4</td><td>Navigating the Coronial Jurisdiction</td><td><b>3</b></td><td>$390</td><td><span class="pill pe">MX Email 3 · $390</span></td></tr>
+      <tr><td style="color:#aaa">5</td><td>Overseas Investment Act Reform: New National Interest Test</td><td><b>3</b></td><td>$570</td><td><span class="pill pe">MX Email 3 · $570</span></td></tr>
+      <tr><td style="color:#aaa">6</td><td>Wellbeing By Design: Using AI for Resilience</td><td><b>3</b></td><td>$365</td><td><span class="pill pa">Ads/Social 2 · $235</span><span class="pill pe">MX Email 1 · $130</span></td></tr>
+      <tr><td style="color:#aaa">7</td><td>Major Privacy Law Reforms</td><td><b>2</b></td><td>$260</td><td><span class="pill pe">MX Email 1 · $130</span><span class="pill po">Referral 1 · $130</span></td></tr>
+      <tr><td style="color:#aaa">8</td><td>Vicarious Trauma: Risks &amp; Practical Strategies</td><td><b>2</b></td><td>$235</td><td><span class="pill po">N/A 1 · $130</span><span class="pill pa">Ads/Social 1 · $105</span></td></tr>
+      <tr><td style="color:#aaa">9</td><td>Auckland Education Law Conference 2026</td><td><b>1</b></td><td>$690</td><td><span class="pill pe">MX Email 1 · $690</span></td></tr>
+      <tr><td style="color:#aaa">10</td><td>Family Law 'Crash Course' in Relationship Property</td><td><b>1</b></td><td>$420</td><td><span class="pill pa">Ads/Social 1 · $420</span></td></tr>
+      <tr><td style="color:#aaa">11</td><td>Acting in Family Violence Matters</td><td><b>1</b></td><td>$345</td><td><span class="pill pa">Ads/Social 1 · $345</span></td></tr>
+      <tr><td style="color:#aaa">12</td><td>Managing Deportation Risk Under Immigration Amendment Act 2026</td><td><b>1</b></td><td>$91</td><td><span class="pill pe">MX Email 1 · $91</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+</div><!-- end page -->
+
+<script>
+function bars(id, data, max, colors) {
+  const el = document.getElementById(id);
+  data.forEach((d, i) => {
+    const p = Math.round((d.v / max) * 100);
+    el.innerHTML += `<div class="br">
+      <div class="bl" title="${d.l}">${d.l}</div>
+      <div class="bt"><div class="bf" style="width:${p}%;background:${colors[i % colors.length]}"></div></div>
+      <div class="bv">${d.v}</div>
+    </div>`;
+  });
+}
+const C = ['#378ADD','#639922','#888780','#EF9F27','#7F77DD','#D4537E','#1D9E75','#B4B2A9','#533AB7','#BA7517'];
+bars('a1',[
+  {l:'MX Email',v:55},{l:'Ads/Social',v:19},{l:'N/A',v:8},{l:'Google Search',v:8},
+  {l:'Ret. Subscriber',v:4},{l:'Ret. PD',v:4},{l:'SMS',v:2},{l:'Association',v:1}
+],55,C);
+bars('a2',[
+  {l:'265 AUS TARGETS',v:31},{l:'265_ADS',v:19},{l:'N/A',v:19},{l:'265 AUS GENERAL',v:16},
+  {l:'265 AUS PDs',v:7},{l:'265 REACTIVATED PDS',v:5},{l:'EB',v:2},{l:'Other',v:4}
+],31,C);
+bars('n1',[
+  {l:'MX Email',v:18},{l:'Ads/Social',v:7},{l:'N/A',v:5},{l:'Ret. PD',v:2},
+  {l:'Live Chat',v:1},{l:'Referral',v:1},{l:'Email Subscribe',v:1},{l:'Google Ads',v:1},{l:'Sales/Blog',v:2}
+],18,C);
+bars('n2',[
+  {l:'265 NZ TARGETS',v:9},{l:'265_ADS',v:7},{l:'N/A',v:6},{l:'265 AUS GENERAL',v:5},
+  {l:'265 NZ GENERAL',v:2},{l:'265 REACTIVATED PDS',v:2},{l:'265 AUS TARGETS',v:2},{l:'Other',v:5}
+],9,C);
+</script>
+</body>
+</html>
